@@ -13,9 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return '登録結果画面';
-});
-
 Route::get('/create', 'StaffController@create');
 Route::post('/', 'StaffController@store');
+Route::get('/', 'StaffController@index');
