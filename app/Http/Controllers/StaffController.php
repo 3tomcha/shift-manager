@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Staff;
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class StaffController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        return 'index';
     }
 
     /**
@@ -34,7 +35,12 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $date = $request->input('date');
+        $staff = new Staff();
+        $staff->date = $date;
+        $staff->save();
+
+        return redirect('/');
     }
 
     /**

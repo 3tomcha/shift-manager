@@ -17,4 +17,5 @@ Route::get('/', function () {
     return '登録結果画面';
 });
 
-Route::get('/create', 'UserController@create');
+Route::get('/create', 'StaffController@create');
+Route::post('/', 'StaffController@store');
