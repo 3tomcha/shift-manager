@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/dashboard', function () {
+    return '登録結果画面';
+});
+
+Route::get('/create', function () {
+    return '投稿画面';
+});
